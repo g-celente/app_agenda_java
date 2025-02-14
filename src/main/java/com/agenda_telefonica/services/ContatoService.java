@@ -30,4 +30,16 @@ public class ContatoService {
         }
     }
 
+    public ContatoModel buscarContato(String name) {
+        for (ContatoModel contatoModel : contatoModel.contatos) {
+            if (contatoModel.getName().equalsIgnoreCase(name)) {
+                System.out.println("Nome de Contato: " + contatoModel.getName());
+                System.out.println("Telefone de Contato: " + contatoModel.getPhone());
+                System.out.println("Email de Contato: " + contatoModel.getEmail());
+                return contatoModel;
+            }
+        }
+        return null;
+    }
+
 }

@@ -37,6 +37,9 @@ public class MainView {
                 case 2:
                     listarContato();
                     break;
+                case 3:
+                    buscarContato();
+                    break;
                 case 6:
                     System.out.println("Saindo a agnência telefônica");
                     return;
@@ -70,5 +73,13 @@ public class MainView {
 
     private void listarContato() {
         contatoService.listarContato();
+    }
+
+    private void buscarContato() {
+        System.out.println("==== Buscar Contato ====");
+        System.out.println("Digite qual o nome do contato: ");
+        String name = scanner.nextLine();
+
+        contatoService.buscarContato(name);
     }
 }
